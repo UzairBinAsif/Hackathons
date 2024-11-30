@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(241, 223, 188);
+  font-family: "Poppins", serif;
+  font-style: normal;
+}
+
+.mainContainer {
+  margin: auto;
+  width: 450px;
+  height: 550px;
+  background-color: white;
+  display: flex;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.425);
+}
+
+.leftBox {
+  width: 35%;
+  height: 100%;
+  background-color: rgb(16, 16, 92);
+  color: white;
+  margin-left: 25px;
+}
+
+.rightBox {
+  width: 90%;
+  height: 100%;
+  background-color: white;
+}
+
+#rBox {
+  margin: 25px;
+  font-weight: 200;
+}
+
+img {
+  color: white;
+  margin: 40% 10% 10% 10%;
+  border-radius: 100px;
+  width: 100px;
+}
+
+footer {
+    font-weight: 300;
+    font-size: small;
+    margin-top: 2vh;
+    color: rgb(90, 90, 90);
+  }
+
+.rText {
+    font-size: small;
+    font-weight: 300;
+}
+
+.lText {
+  margin: 10px;
+  font-size: small;
+}
+
+.headings {
+  margin: 5px;
+}

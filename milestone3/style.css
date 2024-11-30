@@ -1,0 +1,73 @@
+:root{
+    /* --pri-color: rgb(237, 165, 255); */
+    --pri-color: rgb(42, 190, 183);
+    --sec-color: black;
+    --shadow-color: rgba(0, 0, 0, 0.171);
+    --fieldset-text-color: rgb(124, 90, 124);
+    --fieldset-color: magenta;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background-color: var(--pri-color);
+  padding: 0 10vw;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    padding: 0 10vw;
+    color: var(--sec-color);
+}
+
+fieldset {
+    color: var(--fieldset-text-color);
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--fieldset-color);
+    border-radius: 15px;
+}
+
+form {
+    margin: auto;
+    border: none;
+    border-radius: 15px;
+    padding-bottom: 1px;
+    box-shadow: 0px 12px 16px 7px var(--shadow-color);
+    max-width: fit-content;
+    margin-bottom: 10vh;
+}
+
+input, textarea {
+    margin-bottom: 1em;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+#generate-button {
+    font-family: "Poppins", sans-serif;
+    border: none;
+    border-radius: 100px;
+    padding: 1em;
+    margin: 10px;
+}
+
+input {
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+legend, label {
+    font-weight: bold;
+}
