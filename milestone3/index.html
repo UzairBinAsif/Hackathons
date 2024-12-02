@@ -8,35 +8,112 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="container">
     <h1>Dynamic Resume Builder made by UZAIR BIN ASIF</h1>
-    <form id="res-form">
+    <form id="resForm">
 
         <fieldset>
-            <legend>Your Information</legend>
-            <label for="name">Name: </label>
-            <input type="text" id="name" name="name" required><br>
-            
-            <label for="email">e-Mail: </label>
-            <input type="email" id="email" name="email" required><br>
 
-            <label for="contact">Phone No: </label>
-            <input type="number" id="number" name="contact" required><br>
+            <legend>Your Information</legend>
+
+            <label for="name">Full Name </label>
+            <input type="text" id="name" name="name" placeholder="your name" required><br>
+            
+            <label for="email">e-Mail </label>
+            <input type="email" id="email" name="email" placeholder="abc@xyz.com" required><br>
+
+            <label for="contact">Phone No </label>
+            <input type="number" id="number" name="contact" placeholder="03XX XXXXXXX" required><br>
             
             <label for="education">Education</label>
-            <input type="number" id="number" name="education" required><br>
+            <input type="text" id="education" name="education" placeholder="matric, inter (separated by comma)" required><br>
+            
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="B-XX, Sector Z, Casper, Manchester." required><br>
+
+            <label for="language">Language</label>
+            <input type="text" id="language" name="education" placeholder="English, Hindi, Spanish (separated by comma)" required><br>
 
             <legend>Skills</legend>
-            <textarea placeholder="   enter your skills" cols="45%" id="skills"></textarea>
+            <textarea placeholder="enter your skills (separated by comma)" cols="45%" id="skills"></textarea>
             </textarea>
 
             <legend>Work Experience</legend>
-            <textarea placeholder="   enter work experience" cols="45%" name="work" id="work"></textarea>
+            <textarea placeholder="2 years, etc" cols="45%" name="work" id="work"></textarea>
 
+            <label for="image">Photo</label>
+            <input type="file" name="image" id="image">
+            
         </fieldset>
-        <button type="submit" id="generate-button">GENERATE RESUME</button>
+        
+        <div style="display: flex; justify-content: center;">
+            <button onclick="window.location.href='index.html'" id="clear-button">CLEAR</button>
+        
+            <button type="submit" id="generate-button">GENERATE RESUME</button>
+        </div>
+
     </form>
+</div>
+    <div id="resPage" class="res-page hidden">
+
+            <div class="mainContainer">
+
+                <div class="leftBox">
+
+                  <div class="image">
+                  <img src="" id="resumeImage" alt="Image Here" />
+                </div>
+
+                <div class="lText">
+
+                  <div style="font-weight: 500;font-size: medium;">Address</div>
+                  <p id="resumeAddress"></p>
+
+                  
+                  <div style="font-weight: 500;font-size: medium;margin-top: 10px;"> Experience</div>
+                  <p id="resumeExperience"></p>
+
+                  <div style="font-weight: 500;font-size: medium;">Language</div>
+                  <p id="resumeLanguage"></p>
+                </div>
+
+              </div>
+
+              <div class="rightBox">
+
+                <div id="rBox">
+                    
+                    <h2 id="resumeName"></h2>
+                    
+                    <hr>
+
+                    <b>About me:</b><br><br>
+                    <div class="rText">
+                        
+                    </div>
+
+                    <b class="headings">E-mail:</b> <br>
+                    <div id="resumeEmail" class="rText"></div><br>
+
+                    <b class="headings">Phone:</b> <br>
+                    <div id="resumePhone" class="rText"></div><br>
+
+                    <b class="headings">Education:</b> <br>
+                    <div id="resumeEducation" class="rText"></div><br>
+
+                    <b class="headings">Skills:</b> <br>
+                    <div class="rText">
+                        <p id="resumeSkills"></p>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
